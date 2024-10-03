@@ -40,7 +40,7 @@ app.listen(port, () => {
 
 async function randomQueryGenerator(input: string): Promise<string> {
     try {
-        const ollama = new Ollama({ host: 'https://ollama-demo.fly.dev' });
+        const ollama = new Ollama({ host: 'http://127.0.0.1:11434' });
         const queryResponse: GenerateResponse = await promptAndAnswer(input, ollama);
 
         console.log('Generated Query Response:', queryResponse);
